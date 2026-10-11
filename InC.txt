@@ -1,0 +1,42 @@
+// in C for one player
+
+setcpm(120/4)
+
+// effects
+
+
+// repeated C's
+$: note("<72>*8").sound("gm_glockenspiel:0").gain(0.3).mask("<[1 0] 0 1 0>")
+  .attack(0.175).room(0.5).clip(0.8).dist(0.6)._punchcard()
+$: note("<48>*8").sound("gm_vibraphone").gain(0.1).attack(0.15).mask("<0 1 0 1>")
+
+
+// cells
+
+// 1. 
+
+_$: note("<[36 40@4 ~ ~]*4>").sound("square").gain(0.2)._punchcard().color("pink").room(1.0)
+
+_$: note("<[48 52@2 ~ ~]*4>").sound("tri").gain(0.1).room(0.3)
+
+_$: note("<[60 64@1 ~ ~]*4>").sound("sin").gain(0.4).room(0.2)
+
+// 2.
+
+_$: note("<[[ ~ ~ ~ 60] [64 65] 64 ~]*2>").sound("square").gain(0.2).release(0.1)._punchcard().color("cyan")
+
+
+// 3. 
+
+_$: note("< ~ 64 65 64>*4").sound("tri").gain(0.2)._punchcard().color("white")
+
+_$: note("< ~ 76 77 76>*2").sound("sine").gain(0.3)._punchcard().color("purple")
+
+
+// 4.  
+
+$: note("< ~ 52 53 55>*2").sound("sin").gain(0.3)._punchcard().color("red")
+
+//$: note
+
+
